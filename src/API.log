@@ -1,0 +1,2 @@
+GET /whattimeisit 200 7 - 4.253 ms
+GET /whattimeisit 200 7 - 1.272 ms
