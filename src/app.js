@@ -5,7 +5,7 @@ const path = require('path');
 const fs = require('fs');
 const app = express();
 
-//I used morgan logging: https://expressjs.com/en/resources/middleware/morgan.html
+//logging
 app.use(morgan('tiny', {
   stream: fs.createWriteStream(path.join(__dirname, './API.log'))
 }))
@@ -30,7 +30,7 @@ res.send(currentTime);
 });
 
 
-//I used the supertest module for this: https://www.npmjs.com/package/supertest
+//test for GET request
 request(app)
   .get('/whattimeisit').expect(200)
   .end((err) => {
